@@ -419,6 +419,13 @@
     }
     
 
+
+	/* 设置音乐播放器自启动 */
+	$(document).ready(function() { 
+		alert("ddd");
+		var myAuto = document.getElementById("musicAudio");
+		myAuto.play();
+	});;
 </script>
 
 <!--加入行号的高亮代码块样式-->
@@ -581,5 +588,12 @@
 
 
 
+
+/* 引入音乐播放器 */
+<div class="music-player">
+	<audio controls height="100" width="100" id="musicAudio" loop="loop">
+		<source src="../../source/music/why.mp3" type="audio/mpeg">
+	</audio>
+</div>
 
 </html>
