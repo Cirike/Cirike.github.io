@@ -475,6 +475,11 @@
         $(".hide_box").fadeToggle();
     }
     
+	
+	/*自动播放音乐*/
+	$(document).ready(function (){
+		document.getElementById("musicAudio").play();
+	})
 </script>
 
 <!--加入行号的高亮代码块样式-->
@@ -637,13 +642,10 @@
 
 
 
-
 /* 引入音乐播放器 */
 <div style="position:absolute; bottom: 0; right: 0;">
-    <audio controls height="100" width="100" id="musicAudio" autoplay="autoplay" loop="loop" >
-			<source src="why.mp3" type="audio/mpeg">
+    <audio autoplay controls height="100" width="100" id="musicAudio" loop="loop" >
+			<source src="music/why.mp3" type="audio/mpeg">
 	</audio>
 </div>
-
-
 </html>
