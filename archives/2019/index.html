@@ -69,7 +69,7 @@
         
     
         
-        <a title="github" href="https://github.com/yelog" target="_blank">
+        <a title="github" href="https://github.com/Cirike" target="_blank">
             
                 <svg class="iconfont-svg" aria-hidden="true">
                     <use xlink:href="#icon-github"></use>
@@ -79,13 +79,11 @@
         
     
         
-        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-facebook"></use>
-                </svg>
-            
-        </a>
+    
+        
+    
+        
+    
         
     
         
@@ -93,81 +91,19 @@
         
     
         
-        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-instagram"></use>
-                </svg>
-            
-        </a>
-        
     
         
-        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-reddit"></use>
-                </svg>
-            
-        </a>
-        
     
-        
-        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-weibo"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-jianshu"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-zhihu"></use>
-                </svg>
-            
-        </a>
         
     
         
     
         
-        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-oschina"></use>
-                </svg>
-            
-        </a>
-        
     
         
     
         
-        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-email"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=374933269&site=qq&menu=yes" target="_blank">
             
                 <svg class="iconfont-svg" aria-hidden="true">
                     <use xlink:href="#icon-qq"></use>
@@ -231,7 +167,7 @@
     <div class="friends-content">
         <ul>
             
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            <li><a target="_blank" href="https://www.bilibili.com">哔哩哔哩</a></li>
             
         </ul>
     </div>
@@ -321,9 +257,9 @@
         var gitalk = new Gitalk({
             clientID: '',
             clientSecret: '',
-            repo: 'yelog.github.io',
-            owner: 'yelog',
-            admin: ['yelog'],
+            repo: 'Cirike.github.io',
+            owner: 'Cirike',
+            admin: ['Cirike'],
             id: decodeURI(location.pathname),
             distractionFreeMode: 'true',
             language: 'zh-CN',
@@ -444,6 +380,37 @@
 	$(document).ready(function (){
 		document.getElementById("musicAudio").play();
 	})
+	
+	
+    window.onload = function(){
+	
+        var arr = ["music/why.mp3","music/TimeLapse.mp3","music/Fermata.mp3",];//存入所需歌曲的src地址
+        var myAudio = new Audio();
+        myAudio.preload = true;
+        myAudio.controls = true;
+		
+		myAudio.src = arr[getRandom(arr.length)]  //随机获取歌曲的src
+		
+		
+        myAudio.addEventListener('ended', playEndedHandler, false);
+        myAudio.play();
+        document.getElementById("audioBox").appendChild(myAudio);
+        myAudio.loop = false;//禁止循环，否则无法触发ended事件
+        function playEndedHandler(){
+            myAudio.src = arr[getRandom(arr.length)];
+            myAudio.play();
+        }
+		
+		// 生成随机下标
+		function getRandom(length){
+			
+			var num = Math.random();
+			num = num * (length);
+			num = Math.floor(num);
+			return num;
+		}
+    }
+
 </script>
 
 <!--加入行号的高亮代码块样式-->
@@ -607,9 +574,10 @@
 
 
 /* 引入音乐播放器 */
-<div style="position:absolute; bottom: 0; right: 0;">
+<!-- <div style="position:absolute; bottom: 0; right: 0;">
     <audio autoplay controls height="100" width="100" id="musicAudio" loop="loop" >
 			<source src="music/why.mp3" type="audio/mpeg">
 	</audio>
-</div>
+</div> -->
+<div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>
 </html>
