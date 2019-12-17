@@ -6,11 +6,16 @@
   <meta name="keywords" content="">
   <meta name="description" content="Hello World | さくら荘の友人A">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta property="og:type" content="website">
-<meta property="og:title" content="さくら荘の友人A">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于hexo和Github搭建个人静态博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;cirike.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;begin-hexo&#x2F;index.html">
 <meta property="og:site_name" content="さくら荘の友人A">
+<meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta property="article:published_time" content="2019-12-17T04:28:28.000Z">
+<meta property="article:modified_time" content="2019-12-17T05:23:42.377Z">
 <meta property="article:author" content="Cirike">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 
 
@@ -138,7 +143,15 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(1)</small></div></li>
+    <li><div class="all active">全部文章<small>(2)</small></div></li>
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(1)</small></div>
+                
+            </li>
+            
+        
     
 </ul>
 <div class="left-bottom">
@@ -150,7 +163,7 @@
     </div>
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="1">
+<input type="hidden" id="yelog_site_posts_number" value="2">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -184,11 +197,23 @@
     </form>
     <div class="tags-list">
     
+    <li class="article-tag-list-item">
+        <a class="color5">hexo</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
     
     <nav id="title-list-nav">
+        
+        <a  class="工具 "
+           href="/2019/12/17/begin-hexo/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="基于hexo和Github搭建个人静态博客">基于hexo和Github搭建个人静态博客</span>
+            <span class="post-date" title="2019-12-17 12:28:28">2019/12/17</span>
+        </a>
         
         <a  class=""
            href="/2019/12/12/hello-world/"
@@ -302,7 +327,7 @@
     <p><span class="copy-title">本文作者:</span><a  title="Cirike">Cirike</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-12, 12:29:24</p>
     <p><span class="copy-title">最后更新:</span>2019-12-12, 12:29:24</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/12/hello-world/" title="Hello World">http://yoursite.com/2019/12/12/hello-world/</a>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/12/hello-world/" title="Hello World">http://cirike.github.io/2019/12/12/hello-world/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -345,7 +370,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full"><span class="min mobile"></span></button>
+        <button class="full"><span class="min "></span></button>
 <button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
 <div class="post-toc"><span class="post-toc-title">目录</span>
     <div class="post-toc-content">
@@ -385,7 +410,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': [],
+            'data': ['#hexo',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -445,19 +470,19 @@
     
 	
 	/*自动播放音乐*/
-	$(document).ready(function (){
+	<!-- $(document).ready(function (){
 		document.getElementById("musicAudio").play();
-	})
+	}) -->
 	
 	
     window.onload = function(){
 	
-        var arr = ["music/why.mp3","music/TimeLapse.mp3","music/Fermata.mp3",];//存入所需歌曲的src地址
+        var arr = ["music/why.mp3","music/TimeLapse.mp3","music/Fermata.mp3","music/TimeWalkingOnMemories.mp3"];//存入所需歌曲的src地址
         var myAudio = new Audio();
         myAudio.preload = true;
         myAudio.controls = true;
 		
-		myAudio.src = arr[getRandom(arr.length)]  //随机获取歌曲的src
+		myAudio.src = arr[arr.length]  //随机获取歌曲的src
 		
 		
         myAudio.addEventListener('ended', playEndedHandler, false);
