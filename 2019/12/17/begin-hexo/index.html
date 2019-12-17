@@ -6,14 +6,14 @@
   <meta name="keywords" content=" hexo ">
   <meta name="description" content="基于hexo和Github搭建个人静态博客 | さくら荘の友人A">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta name="description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 Welcome to N">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于hexo和Github搭建个人静态博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;cirike.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;begin-hexo&#x2F;index.html">
 <meta property="og:site_name" content="さくら荘の友人A">
-<meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 Welcome to N">
 <meta property="article:published_time" content="2019-12-17T04:28:28.000Z">
-<meta property="article:modified_time" content="2019-12-17T05:34:34.516Z">
+<meta property="article:modified_time" content="2019-12-17T07:52:00.353Z">
 <meta property="article:author" content="Cirike">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -22,6 +22,8 @@
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -265,7 +267,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-17 13:34:34'>2019-12-17 12:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-17 15:52:00'>2019-12-17 12:28</time>
         
     </div>
     <div class="article-meta">
@@ -319,15 +321,17 @@
 <li><p><strong>Node.js</strong></p>
 <p>hexo基于Node.js，安装hexo前需要先安装好node.js。可以在<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">官网</a>下载。</p>
 <p>安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Welcome to Node.js (版本号).</span><br><span class="line"><span class="built_in">Type</span> ".<span class="built_in">help</span>" <span class="keyword">for</span> <span class="built_in">more</span> information.</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">Welcome to Node.js (版本号).
+Type &quot;.help&quot; for more information.
+</code></pre>
 <p>即为安装成功</p>
 </li>
 <li><p><strong>Git</strong></p>
 <p>接着需要安装git，同样可以前往<a href="https://git-scm.com/" target="_blank" rel="noopener">官网</a>下载最新版本的git。</p>
 <p>安装完成后鼠标右键菜单栏出现Git Gui Here和Git Bash Here即为安装成功。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;yourname&quot;</span><br><span class="line">$ git config --global user.email youremail</span><br></pre></td></tr></table></figure>
-
+<pre><code class="git"> $ git config --global user.name &quot;yourname&quot;
+ $ git config --global user.email youremail
+</code></pre>
 <p>打开Git Bash做好基础配置。</p>
 </li>
 <li><p><strong>Markdown编辑器</strong></p>
@@ -337,66 +341,76 @@
 </li>
 <li><p><strong>Hexo</strong></p>
 <p>接下来可以正式下载Hexo了，Win+R运行打开cmd命令行</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -g hexo</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">$ npm i -g hexo
+</code></pre>
 <p>安装hexo</p>
 <p>如果下载速度太慢可以配置国内cnpm镜像，在cmd配置</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
 <p>安装完成后就可以使用cnpm代替npm操作，不同的是走的是国内的镜像，速度回变快</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm i -g hexo</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">$ cnpm i -g hexo
+</code></pre>
 <p>安装完成之后查看版本号</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">$ hexo -v
+</code></pre>
 <p>若出现版本号则hexo安装成功。</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure>
-
+<pre><code class="cmd">$ cnpm install
+</code></pre>
 <p>安装依赖</p>
 <p>进入自己的工作区，新建一个文件夹，进入新建文件夹，右键菜单栏点击Git Bash Here打开Git命令行窗口，初始化该文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-
+<pre><code class="git">$ hexo init
+</code></pre>
 <p>初始化完成后文件夹会出现hexo基本结构文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|-- _config.yml</span><br><span class="line">|-- package.json</span><br><span class="line">|-- scaffolds</span><br><span class="line">|-- source</span><br><span class="line">   |-- _posts</span><br><span class="line">|-- themes</span><br><span class="line">|-- .gitignore</span><br><span class="line">|-- package.json</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="filesystem">|-- _config.yml
+|-- package.json
+|-- scaffolds
+|-- source
+   |-- _posts
+|-- themes
+|-- .gitignore
+|-- package.json
+</code></pre>
+<p>默认会在source/_posts生成hello-world.md文件，在Git Bash继续输入</p>
+<pre><code class="git">$ hexo new &quot;title&quot;
+</code></pre>
+<p>就会在_posts新生成一个title.md文件，使用Typora打开这个文件就可以写自己的文章了。</p>
+<pre><code class="cmd">$ hexo s                   #s为serve
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
+</code></pre>
+<p>这时hexo就部署在了本机，打开浏览器地址栏输入 localhost:4000 就能看到博客界面了。</p>
 </li>
-</ul>
-<p>  默认会在source/_posts生成hello-world.md文件，在Git Bash继续输入</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure>
-
-<p>  就会在_posts新生成一个title.md文件，使用Typora打开这个文件就可以写自己的文章了。</p>
-  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s                   #s为serve</span><br><span class="line">INFO  <span class="built_in">Start</span> processing</span><br><span class="line">INFO  Hexo is running <span class="built_in">at</span> http://localhost:<span class="number">4000</span> . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-
-<p>  这时hexo就部署在了本机，打开浏览器地址栏输入 localhost:4000 就能看到博客界面了。</p>
-<ul>
 <li><p><strong>Github</strong></p>
 <p>打开<a href="https://www.github.com" target="_blank" rel="noopener">Github</a>登录（没有要注册），新建一个仓库，仓库名为 <em>{yourname}</em>.github.io， <em>{yourname}</em>是Github的账户名称。</p>
 <p>在Github的右上角打开setting打开设置页面，点击选择SSH and GPS keys，点击New SSH key新建一个SSH keys，Title随意起，Key值在C:\users\administrator\找到.ssh文件夹，如果没有打开Git Bash输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;email&quot;    #email为git config设置的邮箱</span><br></pre></td></tr></table></figure>
-
+<pre><code class="git">$ ssh-keygen -t rsa -C &quot;email&quot;    #email为git config设置的邮箱
+</code></pre>
 <p>就会生成.ssh文件夹，其中id_rsa.pub文件未生成的ssh公钥，复制里面的内容到上面Github的Key里面，点击Add SSH key就可以建立本机到Github的SSH连接了。</p>
 <p>打开_config.yml文件</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span>         <span class="comment">#修改此处为你的标题，即你网站的主标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">''</span>		<span class="comment">#此处为副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">''</span>		<span class="comment">#网站描述</span></span><br><span class="line"><span class="attr">keywords:</span>			</span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span> <span class="string">Doe</span>	<span class="comment">#作者名</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span>		<span class="comment">#网站使用语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span>		<span class="comment">#网站使用时区</span></span><br></pre></td></tr></table></figure>
-
-<p> 根据自己需要修改网站信息，接下来配置与Github的联系（重要），此处在yml文件最下面        </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&#123;yourname&#125;/&#123;yourname&#125;.github.io</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p> 此处{yourname}为Github用户名，不确定可以打开刚才Github新建的仓库点击Clone or  download查看，</p>
-<p> 继续Git Bash </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm i hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
-
-<p>  安装完成就可以使用命令部署到Github仓库了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g		#g为generate</span><br><span class="line">$ hexo d		#d为deploy</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="yml">  # Site
+  title: Hexo         #修改此处为你的标题，即你网站的主标题
+  subtitle: &#39;&#39;        #此处为副标题
+  description: &#39;&#39;        #网站描述
+  keywords:            
+  author: John Doe    #作者名
+  language: en        #网站使用语言
+  timezone: &#39;&#39;        #网站使用时区</code></pre>
+<p>根据自己需要修改网站信息，接下来配置与Github的联系（重要），此处在yml文件最下面        </p>
+<pre><code class="yml">  deploy:
+    type: git
+    repo: git@github.com:{yourname}/{yourname}.github.io    #此处{yourname}为            Github用户名，不确定可以打开刚才Github新建的仓库点击Clone or download查看
+  branch: master</code></pre>
+<p>继续Git Bash</p>
+<pre><code class="git">  $ cnpm i hexo-deployer-git -save</code></pre>
+<p>安装完成就可以使用命令直接部署到Github仓库去了</p>
+<pre><code class="git">  $ hexo clean
+  $ hexo g                  #g为generate
+  $ hexo d                  #d为deploy</code></pre>
+<p>Github为你分配的网站地址为 http://{yourname}.github.io</p>
+<p>这是Github分配的二级域名，想要一级域名需要购买之后进行配置。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h2><p>  没想到写一篇文章这么耗时，本章就只介绍基础搭建了，其他之后有空再开新篇吧。</p>
 </li>
 </ul>
-<pre><code>Github为你分配的网站地址为 http://{yourname}.github.io
-
-这是Github分配的二级域名，想要一级域名需要购买之后进行配置。</code></pre><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>  没想到写一篇文章这么耗时，本章就只介绍基础搭建了，其他一些细节之后有空再开新篇吧。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 </span>
@@ -414,7 +428,7 @@
     
     <p><span class="copy-title">本文作者:</span><a  title="Cirike">Cirike</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-17, 12:28:28</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-17, 13:34:34</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-17, 15:52:00</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/begin-hexo/" title="基于hexo和Github搭建个人静态博客">http://cirike.github.io/2019/12/17/begin-hexo/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -429,8 +443,8 @@
 <script type="text/javascript">
     $.getScript('/js/gitalk.js', function () {
         var gitalk = new Gitalk({
-            clientID: '',
-            clientSecret: '',
+            clientID: '1e8ed9822e8bff5eb514',
+            clientSecret: 'bd4521767ab17983793f22a8113f537723e21fb6',
             repo: 'Cirike.github.io',
             owner: 'Cirike',
             admin: ['Cirike'],
@@ -522,6 +536,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -575,6 +603,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>

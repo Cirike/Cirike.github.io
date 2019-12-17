@@ -6,14 +6,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="さくら荘の友人A">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta name="description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 Welcome to N">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于hexo和Github搭建个人静态博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;cirike.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;begin-hexo&#x2F;index.html">
 <meta property="og:site_name" content="さくら荘の友人A">
-<meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
+<meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 Welcome to N">
 <meta property="article:published_time" content="2019-12-17T04:28:28.000Z">
-<meta property="article:modified_time" content="2019-12-17T05:34:34.516Z">
+<meta property="article:modified_time" content="2019-12-17T07:52:00.353Z">
 <meta property="article:author" content="Cirike">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -22,6 +22,8 @@
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -286,8 +288,8 @@
 <script type="text/javascript">
     $.getScript('/js/gitalk.js', function () {
         var gitalk = new Gitalk({
-            clientID: '',
-            clientSecret: '',
+            clientID: '1e8ed9822e8bff5eb514',
+            clientSecret: 'bd4521767ab17983793f22a8113f537723e21fb6',
             repo: 'Cirike.github.io',
             owner: 'Cirike',
             admin: ['Cirike'],
@@ -372,6 +374,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -425,6 +441,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>
