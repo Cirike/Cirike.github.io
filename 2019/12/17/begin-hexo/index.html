@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="さくら荘の友人A">
 <meta property="og:description" content="基于hexo和Github搭建个人静态博客前言本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！ 环境搭建 Node.js hexo基于Node.js，安装hexo前需要先安装好node.js。可以在官网下载。 安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现 12Welcome to">
 <meta property="article:published_time" content="2019-12-17T04:28:28.000Z">
-<meta property="article:modified_time" content="2019-12-17T05:23:42.377Z">
+<meta property="article:modified_time" content="2019-12-17T05:34:34.516Z">
 <meta property="article:author" content="Cirike">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -105,6 +105,14 @@
     
         
     
+        
+        <a title="email" href="mailto:374933269@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
         
     
         
@@ -259,7 +267,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-17 13:23:42'>2019-12-17 12:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-17 13:34:34'>2019-12-17 12:28</time>
         
     </div>
     <div class="article-meta">
@@ -374,20 +382,23 @@
 <p>打开_config.yml文件</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span>         <span class="comment">#修改此处为你的标题，即你网站的主标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">''</span>		<span class="comment">#此处为副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">''</span>		<span class="comment">#网站描述</span></span><br><span class="line"><span class="attr">keywords:</span>			</span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span> <span class="string">Doe</span>	<span class="comment">#作者名</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span>		<span class="comment">#网站使用语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span>		<span class="comment">#网站使用时区</span></span><br></pre></td></tr></table></figure>
 
-<p>根据自己需要修改网站信息，接下来配置与Github的联系（重要），此处在yml文件最下面</p>
-</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&#123;yourname&#125;/&#123;yourname&#125;.github.io</span>    <span class="comment">#此处&#123;yourname&#125;为Github用户名，不确定可以打开刚才Github新建的仓库点击Clone or download查看</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p> 根据自己需要修改网站信息，接下来配置与Github的联系（重要），此处在yml文件最下面        </p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&#123;yourname&#125;/&#123;yourname&#125;.github.io</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
-<p>  继续Git Bash</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm i hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
+<p> 此处{yourname}为Github用户名，不确定可以打开刚才Github新建的仓库点击Clone or  download查看，</p>
+<p> 继续Git Bash </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm i hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
 
 <p>  安装完成就可以使用命令部署到Github仓库了</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g                  #g为generate</span><br><span class="line">$ hexo d				  #d为deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g		#g为generate</span><br><span class="line">$ hexo d		#d为deploy</span><br></pre></td></tr></table></figure>
 
-<p>  Github为你分配的网站地址为 http://{yourname}.github.io</p>
-<p>  这是Github分配的二级域名，想要一级域名需要购买之后进行配置。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>  没想到写一篇文章这么耗时，本章就只介绍基础搭建了，其他一些细节之后有空再开新篇吧。</p>
+
+
+</li>
+</ul>
+<pre><code>Github为你分配的网站地址为 http://{yourname}.github.io
+
+这是Github分配的二级域名，想要一级域名需要购买之后进行配置。</code></pre><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>  没想到写一篇文章这么耗时，本章就只介绍基础搭建了，其他一些细节之后有空再开新篇吧。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 </span>
@@ -405,7 +416,7 @@
     
     <p><span class="copy-title">本文作者:</span><a  title="Cirike">Cirike</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-17, 12:28:28</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-17, 13:23:42</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-17, 13:34:34</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/begin-hexo/" title="基于hexo和Github搭建个人静态博客">http://cirike.github.io/2019/12/17/begin-hexo/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
