@@ -1678,7 +1678,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: none;
   overflow: hidden;
-  cursor: url("/img/normal.cur"), auto;
+  cursor: url("https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/cur/normal.cur"), auto;
 }
 a {
   color: inherit;
