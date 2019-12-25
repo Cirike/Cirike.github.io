@@ -211,15 +211,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color4">cdn</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color2">github</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hexo</a>
     </li>
     
     <div class="clearfix"></div>
@@ -231,6 +231,14 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        <a  class="工具 "
+           href="/2019/12/24/cdn-accelerate/"
+           data-tag="cdn,github"
+           data-author="" >
+            <span class="post-title" title="使用JSDelivr加速加载Github资源">使用JSDelivr加速加载Github资源</span>
+            <span class="post-date" title="2019-12-24 09:40:10">2019/12/24</span>
+        </a>
         
         <a  class="工具 "
            href="/2019/12/17/begin-hexo/"
@@ -246,14 +254,6 @@
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-12-12 12:29:24">2019/12/12</span>
-        </a>
-        
-        <a  class="工具 "
-           href="/2019/12/24/cdn-accelerate/"
-           data-tag="cdn,github"
-           data-author="" >
-            <span class="post-title" title="使用JSDelivr加速加载Github资源">使用JSDelivr加速加载Github资源</span>
-            <span class="post-date" title="2019-12-24 09:40:10">2019/12/24</span>
         </a>
         
     </nav>
@@ -441,7 +441,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#hexo','#cdn','#github',],
+            'data': ['#cdn','#github','#hexo',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
