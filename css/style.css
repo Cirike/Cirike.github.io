@@ -1347,7 +1347,7 @@ div.ac > ul > li:before,
 }
 .post .pjax article .article-meta .top a:hover {
   text-decoration: none;
-  cursor: text;
+  cursor: url("https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/cur/texto.cur"), auto;
 }
 .post .pjax article .article-meta .author:before {
   content: "\f007";
