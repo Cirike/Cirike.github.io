@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>hexo_after</title>
+      <link href="/2019/12/26/hexo-after/"/>
+      <url>/2019/12/26/hexo-after/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用JSDelivr加速加载Github资源</title>
       <link href="/2019/12/24/cdn-accelerate/"/>
       <url>/2019/12/24/cdn-accelerate/</url>

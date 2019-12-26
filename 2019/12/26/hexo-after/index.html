@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>基于hexo和Github搭建个人静态博客 | さくら荘の友人A</title>
-  <meta name="keywords" content=" hexo ">
-  <meta name="description" content="基于hexo和Github搭建个人静态博客 | さくら荘の友人A">
+  <title>hexo_after | さくら荘の友人A</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="hexo_after | さくら荘の友人A">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo_after">
@@ -268,36 +268,24 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-begin-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-hexo-after" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">基于hexo和Github搭建个人静态博客</h1>
+        <h1 class="article-title">hexo_after</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            
-                <a  data-rel="工具">工具</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a class="color5">hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-26 11:15:52'>2019-12-17 12:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-26 15:49:55'>2019-12-26 15:49</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1k</span>
+        <span>字数:0</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -327,7 +315,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基于hexo和Github搭建个人静态博客"><span class="toc-text">基于hexo和Github搭建个人静态博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-text">结语</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -343,102 +331,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="基于hexo和Github搭建个人静态博客"><a href="#基于hexo和Github搭建个人静态博客" class="headerlink" title="基于hexo和Github搭建个人静态博客"></a>基于hexo和Github搭建个人静态博客</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文记录基于hexo框架部署到github的个人静态博客搭建过程，博客使用markdown语言编写文章，使得页面非常整洁，读写能力卓越！</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
-<li><p><strong>Node.js</strong></p>
-<p>hexo基于Node.js，安装hexo前需要先安装好node.js。可以在<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">官网</a>下载。</p>
-<p>安装好后按Win+R打开运行，输入cmd打开命令行输入node命令，如果出现</p>
-<pre><code class="cmd">Welcome to Node.js (版本号).
-Type &quot;.help&quot; for more information.
-</code></pre>
-<p>即为安装成功</p>
-</li>
-<li><p><strong>Git</strong></p>
-<p>接着需要安装git，同样可以前往<a href="https://git-scm.com/" target="_blank" rel="noopener">官网</a>下载最新版本的git。</p>
-<p>安装完成后鼠标右键菜单栏出现Git Gui Here和Git Bash Here即为安装成功。</p>
-<pre><code class="git"> $ git config --global user.name &quot;yourname&quot;
- $ git config --global user.email youremail
-</code></pre>
-<p>打开Git Bash做好基础配置。</p>
-</li>
-<li><p><strong>Markdown编辑器</strong></p>
-<p>该博客系统使用markdown语法编写文章，markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown是一种语法格式，有多种编辑器可以支持它。</p>
-<p>在这里推荐使用Typora <a href="https://typora.io/" target="_blank" rel="noopener">官网</a>。</p>
-</li>
-<li><p><strong>Hexo</strong></p>
-<p>接下来可以正式下载Hexo了，Win+R运行打开cmd命令行</p>
-<pre><code class="cmd">$ npm i -g hexo
-</code></pre>
-<p>安装hexo</p>
-<p>如果下载速度太慢可以配置国内cnpm镜像，在cmd配置</p>
-<pre><code class="cmd">$ npm install -g cnpm --registry=https://registry.npm.taobao.org
-</code></pre>
-<p>安装完成后就可以使用cnpm代替npm操作，不同的是走的是国内的镜像，速度会变快</p>
-<pre><code class="cmd">$ cnpm i -g hexo
-</code></pre>
-<p>安装完成之后查看版本号</p>
-<pre><code class="cmd">$ hexo -v
-</code></pre>
-<p>若出现版本号则hexo安装成功。</p>
-<pre><code class="cmd">$ cnpm install
-</code></pre>
-<p>安装依赖</p>
-<p>进入自己的工作区，新建一个文件夹，进入新建文件夹，右键菜单栏点击Git Bash Here打开Git命令行窗口，初始化该文件夹</p>
-<pre><code class="git">$ hexo init
-</code></pre>
-<p>初始化完成后文件夹会出现hexo基本结构文件。</p>
-<pre><code class="filesystem">|-- _config.yml
-|-- package.json
-|-- scaffolds
-|-- source
-   |-- _posts
-|-- themes
-|-- .gitignore
-|-- package.json
-</code></pre>
-<p>默认会在source/_posts生成hello-world.md文件，在Git Bash继续输入</p>
-<pre><code class="git">$ hexo new &quot;title&quot;
-</code></pre>
-<p>就会在_posts新生成一个title.md文件，使用Typora打开这个文件就可以写自己的文章了。</p>
-<pre><code class="cmd">$ hexo s                   #s为serve
-INFO  Start processing
-INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
-</code></pre>
-<p>这时hexo就部署在了本机，打开浏览器地址栏输入 localhost:4000 就能看到博客界面了。</p>
-</li>
-<li><p><strong>Github</strong></p>
-<p>打开<a href="https://www.github.com" target="_blank" rel="noopener">Github</a>登录（没有要注册），新建一个仓库，仓库名为 <em>{yourname}</em>.github.io， <em>{yourname}</em>是Github的账户名称。</p>
-<p>在Github的右上角打开setting打开设置页面，点击选择SSH and GPS keys，点击New SSH key新建一个SSH keys，Title随意起，Key值在C:\users\administrator\找到.ssh文件夹，如果没有打开Git Bash输入</p>
-<pre><code class="git">$ ssh-keygen -t rsa -C &quot;email&quot;    #email为git config设置的邮箱
-</code></pre>
-<p>就会生成.ssh文件夹，其中id_rsa.pub文件未生成的ssh公钥，复制里面的内容到上面Github的Key里面，点击Add SSH key就可以建立本机到Github的SSH连接了。</p>
-<p>打开_config.yml文件</p>
-<pre><code class="yml">  # Site
-  title: Hexo         #修改此处为你的标题，即你网站的主标题
-  subtitle: &#39;&#39;        #此处为副标题
-  description: &#39;&#39;        #网站描述
-  keywords:            
-  author: John Doe    #作者名
-  language: en        #网站使用语言
-  timezone: &#39;&#39;        #网站使用时区</code></pre>
-<p>根据自己需要修改网站信息，接下来配置与Github的联系（重要），此处在yml文件最下面        </p>
-<pre><code class="yml">  deploy:
-    type: git
-    repo: git@github.com:{yourname}/{yourname}.github.io    #此处{yourname}为            Github用户名，不确定可以打开刚才Github新建的仓库点击Clone or download查看
-  branch: master</code></pre>
-<p>继续Git Bash</p>
-<pre><code class="git">  $ cnpm i hexo-deployer-git -save</code></pre>
-<p>安装完成就可以使用命令直接部署到Github仓库去了</p>
-<pre><code class="git">  $ hexo clean
-  $ hexo g                  #g为generate
-  $ hexo d                  #d为deploy</code></pre>
-<p>Github为你分配的网站地址为 http://{yourname}.github.io</p>
-<p>这是Github分配的二级域名，想要一级域名需要购买之后进行配置。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h2><p>  没想到写一篇文章这么耗时，本章就只介绍基础搭建了，其他之后有空再开新篇吧。</p>
-</li>
-</ul>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 374933269@qq.com </span>
     </div>
@@ -451,12 +344,12 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>基于hexo和Github搭建个人静态博客</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">1k</span></p>
+    <p><span class="copy-title">文章标题:</span>hexo_after</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">0</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Cirike">Cirike</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-17, 12:28:28</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-26, 11:15:52</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/begin-hexo/" title="基于hexo和Github搭建个人静态博客">http://cirike.github.io/2019/12/17/begin-hexo/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-26, 15:49:55</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-26, 15:49:55</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/26/hexo-after/" title="hexo_after">http://cirike.github.io/2019/12/26/hexo-after/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
