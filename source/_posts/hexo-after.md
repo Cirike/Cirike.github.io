@@ -1,5 +1,5 @@
 ---
-title: hexo_after
+title: hexo的一些技巧
 date: 2019-12-26 15:49:55
 categories:
 - 工具
