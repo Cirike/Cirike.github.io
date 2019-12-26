@@ -436,11 +436,12 @@
 		
     window.onload = function(){
 	
+		//存入所需歌曲的src地址
         var arr = ["https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/1.mp3",
 					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/2.mp3",
 					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/3.mp3",
-					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/4.mp3",];//存入所需歌曲的src地址
-        var myAudio = new Audio();
+					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/4.mp3",];
+          var myAudio = new Audio();
         myAudio.preload = true;
         myAudio.controls = true;
 		
@@ -633,6 +634,12 @@
 <!-- <div style="position:absolute; bottom: 0; right: 0;">
     <audio autoplay controls height="100" width="100" id="musicAudio" loop="loop" >
 			<source src="music/why.mp3" type="audio/mpeg">
+	</audio>
+</div> -->
+<div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>mp3" type="audio/mpeg">
+	</audio>
+</div> -->
+<div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>mp3" type="audio/mpeg">
 	</audio>
 </div> -->
 <div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>

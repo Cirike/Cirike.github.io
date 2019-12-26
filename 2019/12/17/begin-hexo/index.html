@@ -292,7 +292,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-18 10:56:35'>2019-12-17 12:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-26 11:15:52'>2019-12-17 12:28</time>
         
     </div>
     <div class="article-meta">
@@ -374,7 +374,7 @@ Type &quot;.help&quot; for more information.
 <p>如果下载速度太慢可以配置国内cnpm镜像，在cmd配置</p>
 <pre><code class="cmd">$ npm install -g cnpm --registry=https://registry.npm.taobao.org
 </code></pre>
-<p>安装完成后就可以使用cnpm代替npm操作，不同的是走的是国内的镜像，速度回变快</p>
+<p>安装完成后就可以使用cnpm代替npm操作，不同的是走的是国内的镜像，速度会变快</p>
 <pre><code class="cmd">$ cnpm i -g hexo
 </code></pre>
 <p>安装完成之后查看版本号</p>
@@ -455,7 +455,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
     <p><span class="copy-title">文章字数:</span><span class="post-count">1k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Cirike">Cirike</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-17, 12:28:28</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-18, 10:56:35</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-26, 11:15:52</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/begin-hexo/" title="基于hexo和Github搭建个人静态博客">http://cirike.github.io/2019/12/17/begin-hexo/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -600,11 +600,12 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 		
     window.onload = function(){
 	
+		//存入所需歌曲的src地址
         var arr = ["https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/1.mp3",
 					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/2.mp3",
 					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/3.mp3",
-					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/4.mp3",];//存入所需歌曲的src地址
-        var myAudio = new Audio();
+					"https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/music/4.mp3",];
+          var myAudio = new Audio();
         myAudio.preload = true;
         myAudio.controls = true;
 		
@@ -797,6 +798,12 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 <!-- <div style="position:absolute; bottom: 0; right: 0;">
     <audio autoplay controls height="100" width="100" id="musicAudio" loop="loop" >
 			<source src="music/why.mp3" type="audio/mpeg">
+	</audio>
+</div> -->
+<div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>mp3" type="audio/mpeg">
+	</audio>
+</div> -->
+<div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>mp3" type="audio/mpeg">
 	</audio>
 </div> -->
 <div id="audioBox" style="position:absolute; bottom: 0; right: 0;"></div>
