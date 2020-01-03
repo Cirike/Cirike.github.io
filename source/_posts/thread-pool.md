@@ -1,5 +1,5 @@
 ---
-title: thread-pool
+title: ThreadPoolExecutor线程池
 date: 2020-01-03 10:31:33
 categories:
 - 计算机
@@ -15,7 +15,7 @@ tags:
 
 *ThreadPoolExecutor*是**Executor**接口的实现类，用于构造一个线程池。
 
-### 核心构造方法
+### **核心构造方法**
 
 ```java
 public ThreadPoolExecutor(int corePoolSize,
@@ -64,7 +64,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
   通过调整参数可以构造出适应各种场景的线程池，JDK还提供了几种特定的预定义线程池。
 
-### 预定义线程池
+### **预定义线程池**
 
 ​	预定义线程池可以通过JDK提供的`Executors`工具类的静态方法来创建。
 
@@ -108,7 +108,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
    该方法构建出一个单核线程的线程池，线程池只有一个线程，而且使用`new FinalizableDelegatedExecutorService()`包裹，使得该线程池无法通过向下转型为`ThreadPoolExecutor`之后使用`setCorePoolSize()`方法的方式修改线程数目。
 
-### 其它
+### **其它**
 
 ![alt 图片](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/20200103104627.png)
 
