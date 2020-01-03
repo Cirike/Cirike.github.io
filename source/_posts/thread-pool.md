@@ -110,7 +110,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
 ### **其它**
 
-![alt 图片](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/20200103104627.png)
+![Executor接口继承关系](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/20200103104627.png)
 
 **Executor**接口继承关系下还有一个`ScheduledExecutorService`接口，该接口提供了一种给定时间延迟后运行或者定期执行任务方式的线程池，这个留到以后再说。
 

@@ -72,14 +72,14 @@ https://cdn.jsdelivr.net/gh/{Github用户名}/{Github仓库名}@{版本名}/{仓
 
 其中版本名可以在Github当前仓库的Release
 
-![alt 图片](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154346.jpg)
+![](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154346.jpg)
 
 
 
-![alt 图片](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154432.jpg)
+![](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154432.jpg)
 
 
 
-![alt 图片](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154462.jpg)
+![](https://cdn.jsdelivr.net/gh/Cirike/cdn.static.resource@master/blog_img/1577154462.jpg)
 
 输入版本号点击Publish release发布后，@对应的版本号就能访问对应的资源了。
